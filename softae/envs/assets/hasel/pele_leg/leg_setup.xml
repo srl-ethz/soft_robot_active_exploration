@@ -1,0 +1,168 @@
+<mujoco model="JointSetup">
+  <compiler angle="radian" meshdir="assets" autolimits="true" />
+
+  <default>
+    <geom type="mesh" friction="1 0.005 0.001" contype="0" conaffinity="1" density="890.44" />
+    <joint type="hinge" limited="true" damping="0.1" />
+    <position ctrllimited="true" forcelimited="true" forcerange="-100 100" kp="2." />
+    <tendon limited="true" range="-0.001 0.001" />
+  </default>
+
+  <asset>
+    <material name="white" rgba="1 1 1 1" />
+    <material name="black" rgba="0.15 0.15 0.15 1" />
+    <material name="green" rgba="0 1 0 1" />
+    <material name="light_blue" rgba="0.039216 0.541176 0.780392 1" />
+    <material name="red" rgba="1 0 0 1" />
+    <material name="blue" rgba="0 0 1 1" />
+    <material name="yellow" rgba="1 1 0 1" />
+    <material name="orange" rgba="1 0.5 0 1" />
+    <material name="purple" rgba="0.5 0 0.5 1" />
+    <material name="teal" rgba="0 0.5 0.5 1" />
+    <material name="grey" rgba="0.5 0.5 0.5 1" />
+    <material name="dark_green" rgba="0 0.5 0 1" />
+    <material name="dark_blue" rgba="0 0 0.5 1" />
+    <material name="dark_red" rgba="0.5 0 0 1" />
+    <material name="dark_grey" rgba="0.25 0.25 0.25 1" />
+
+
+    <mesh file="PELE_PELE_MuJoCo v4_Hip1 (2)_1_Hip1.stl" name="PELE_PELE_MuJoCo v4_Hip1 (2)_1_Hip1" />
+    <mesh file="PELE_PELE_MuJoCo v4_HASEL_4_electrode_1_electrode.stl" name="PELE_PELE_MuJoCo v4_HASEL_4_electrode_1_electrode" />
+    <mesh file="PELE_PELE_MuJoCo v4_HASEL_4_Shell_1_Shell.stl" name="PELE_PELE_MuJoCo v4_HASEL_4_Shell_1_Shell" />
+    <mesh file="PELE_PELE_MuJoCo v4_Knee_Joint v14_1_Knee2_1_Knee_Foot_Cap.stl" name="PELE_PELE_MuJoCo v4_Knee_Joint v14_1_Knee2_1_Knee_Foot_Cap" />
+    <mesh file="PELE_PELE_MuJoCo v4_HASEL_1_Shell_1_Shell.stl" name="PELE_PELE_MuJoCo v4_HASEL_1_Shell_1_Shell" />
+    <mesh file="PELE_PELE_MuJoCo v4_Hip2 (1)_1_Hip2.stl" name="PELE_PELE_MuJoCo v4_Hip2 (1)_1_Hip2" />
+    <mesh file="PELE_PELE_MuJoCo v4_Frame1_1_Frame2.stl" name="PELE_PELE_MuJoCo v4_Frame1_1_Frame2" />
+    <mesh file="PELE_PELE_MuJoCo v4_HASEL_5_Shell_1_Shell.stl" name="PELE_PELE_MuJoCo v4_HASEL_5_Shell_1_Shell" />
+    <mesh file="PELE_PELE_MuJoCo v4_Boomlink_1_Boom_Link.stl" name="PELE_PELE_MuJoCo v4_Boomlink_1_Boom_Link" />
+    <mesh file="PELE_PELE_MuJoCo v4_Counterweight_Mount v4_1_CounterWeight_Bottom_1_Bottom.stl" name="PELE_PELE_MuJoCo v4_Counterweight_Mount v4_1_CounterWeight_Bottom_1_Bottom" />
+    <mesh file="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Frames_1_Frame2.stl" name="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Frames_1_Frame2" />
+    <mesh file="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Boom2_1_Bearing_Holder_1_Boom2.stl" name="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Boom2_1_Bearing_Holder_1_Boom2" />
+    <mesh file="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Frames_1_Frame1.stl" name="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Frames_1_Frame1" />
+    <mesh file="PELE_PELE_MuJoCo v4_muscle_attach0_1_muscle_attach0.stl" name="PELE_PELE_MuJoCo v4_muscle_attach0_1_muscle_attach0" />
+    <mesh file="PELE_PELE_MuJoCo v4_HASEL_7_Shell_1_Shell.stl" name="PELE_PELE_MuJoCo v4_HASEL_7_Shell_1_Shell" />
+    <mesh file="PELE_PELE_MuJoCo v4_HASEL_1_electrode_1_electrode.stl" name="PELE_PELE_MuJoCo v4_HASEL_1_electrode_1_electrode" />
+    <mesh file="PELE_PELE_MuJoCo v4_Printed_Foot_SEBS v1_1_Foot_Sphere.stl" name="PELE_PELE_MuJoCo v4_Printed_Foot_SEBS v1_1_Foot_Sphere" />
+    <mesh file="PELE_PELE_MuJoCo v4_Hip_1_Hip_shaft_1_Body1.stl" name="PELE_PELE_MuJoCo v4_Hip_1_Hip_shaft_1_Body1" />
+    <mesh file="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_horBearing_1_lowerCradle_1_Boom1.stl" name="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_horBearing_1_lowerCradle_1_Boom1" />
+    <mesh file="PELE_PELE_MuJoCo v4_Body_CF v2_1_Link0.stl" name="PELE_PELE_MuJoCo v4_Body_CF v2_1_Link0" />
+    <mesh file="PELE_PELE_MuJoCo v4_Counterweight_Mount v4_1_CounterWeight_Top_1_Top.stl" name="PELE_PELE_MuJoCo v4_Counterweight_Mount v4_1_CounterWeight_Top_1_Top" />
+    <mesh file="PELE_PELE_MuJoCo v4_HASEL_7_electrode_1_electrode.stl" name="PELE_PELE_MuJoCo v4_HASEL_7_electrode_1_electrode" />
+    <mesh file="PELE_PELE_MuJoCo v4_Shank_CF v2_1_Link2.stl" name="PELE_PELE_MuJoCo v4_Shank_CF v2_1_Link2" />
+    <mesh file="PELE_PELE_MuJoCo v4_Hip1 (2)_1_Boom_connect1.stl" name="PELE_PELE_MuJoCo v4_Hip1 (2)_1_Boom_connect1" />
+    <mesh file="PELE_PELE_MuJoCo v4_Frame1_2_Frame2.stl" name="PELE_PELE_MuJoCo v4_Frame1_2_Frame2" />
+    <mesh file="PELE_PELE_MuJoCo v4_Thigh_CF v2_1_Link1.stl" name="PELE_PELE_MuJoCo v4_Thigh_CF v2_1_Link1" />
+    <mesh file="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Boom_adapt1_1_Adapter (2)_1_Boom3_1.stl" name="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Boom_adapt1_1_Adapter (2)_1_Boom3_1" />
+    <mesh file="PELE_PELE_MuJoCo v4_Knee_Joint v14_1_Knee1_1_Knee_Encoder_Mount.stl" name="PELE_PELE_MuJoCo v4_Knee_Joint v14_1_Knee1_1_Knee_Encoder_Mount" />
+    <mesh file="PELE_PELE_MuJoCo v4_Knee_Joint v14_1_Knee_shaft_1_Body1.stl" name="PELE_PELE_MuJoCo v4_Knee_Joint v14_1_Knee_shaft_1_Body1" />
+    <mesh file="PELE_PELE_MuJoCo v4_HASEL_5_electrode_1_electrode.stl" name="PELE_PELE_MuJoCo v4_HASEL_5_electrode_1_electrode" />
+    <mesh file="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Boom_adapt1_1_Adapter (2)_1_Boom3_2.stl" name="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Boom_adapt1_1_Adapter (2)_1_Boom3_2" />
+  </asset>
+
+  <worldbody>
+    <camera name="main_camera" pos="-1.302 1.258 1.071" xyaxes="-0.611 -0.792 -0.000 0.292 -0.225 0.930" />
+    <light name="top" pos="0 0 2" mode="trackcom" />
+    <body name="Frame">
+      <geom mesh="PELE_PELE_MuJoCo v4_Frame1_1_Frame2" material="white" mass="1" pos="0 0 -0.005" />
+      <geom mesh="PELE_PELE_MuJoCo v4_Frame1_2_Frame2" material="white" mass="1" pos="0 0 -0.005"/>
+      <geom mesh="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Frames_1_Frame1" material="white" mass="1" pos="0 0 -0.005"/>
+      <geom mesh="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Frames_1_Frame2" material="white" mass="1" pos="0 0 -0.005"/>
+      <geom mesh="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_horBearing_1_lowerCradle_1_Boom1" material="black" mass="1" pos="0 0 -0.005"/>
+      <body name="Boom1" pos="0 0 0">
+        <joint name="Boom1_joint" type="hinge" pos="0.33 -0.005549 0.350871" axis="0 0 1" limited="false" />
+        <geom mesh="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Boom2_1_Bearing_Holder_1_Boom2" material="black" density="1240" pos="0 0 -0.005"/>
+        <body name="Boom2" pos="0 0 0">
+          <joint name="Boom2_joint" type="hinge" pos="0.33 -0.005549 0.393507" axis="0 1 0" range="-0.5 0.5" />
+          <joint name="Boom3_joint" type="hinge" pos="0.33 -0.005549 0.393336" axis="1 0 0" range="-0.5 0.5" />
+          <geom mesh="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Boom_adapt1_1_Adapter (2)_1_Boom3_1" material="black" density="1240" />
+          <geom mesh="PELE_PELE_MuJoCo v4_2Axis_Boom v21_1_Boom_adapt1_1_Adapter (2)_1_Boom3_2" material="black" density="1240" />
+          <geom mesh="PELE_PELE_MuJoCo v4_Boomlink_1_Boom_Link" material="black" density="1740" />
+          <!-- density of carbon fiber link is 1,740 kg/m³ -->
+          <!-- formula for mass per unit length = m(kg)=0.0314kg/m×h(m) -->
+          <geom mesh="PELE_PELE_MuJoCo v4_Counterweight_Mount v4_1_CounterWeight_Bottom_1_Bottom" material="black" density="1240" />
+          <geom mesh="PELE_PELE_MuJoCo v4_Counterweight_Mount v4_1_CounterWeight_Top_1_Top" material="black" mass="0.071" />
+          <geom mesh="PELE_PELE_MuJoCo v4_Hip1 (2)_1_Hip1" material="black" density="1240" />
+          <geom mesh="PELE_PELE_MuJoCo v4_Hip1 (2)_1_Boom_connect1" material="black" density="1240" />
+          <geom mesh="PELE_PELE_MuJoCo v4_Body_CF v2_1_Link0" material="black" density="1740" />
+          <geom mesh="PELE_PELE_MuJoCo v4_muscle_attach0_1_muscle_attach0" material="black" density="1240" />
+          <geom mesh="PELE_PELE_MuJoCo v4_HASEL_1_Shell_1_Shell" material="white" mass="0.028" />
+          <geom mesh="PELE_PELE_MuJoCo v4_HASEL_1_electrode_1_electrode" material="black" mass="0.0001" />
+          <geom mesh="PELE_PELE_MuJoCo v4_HASEL_4_Shell_1_Shell" material="white" mass="0.042" />
+          <geom mesh="PELE_PELE_MuJoCo v4_HASEL_4_electrode_1_electrode" material="black" mass="0.0001" />
+          <site name="HF_start" pos="0.0 0.230466 0.343138" size="0.001" material="dark_red" />
+          <site name="HE_start" pos="0.0 0.230638 0.320639" size="0.001" material="dark_red" />
+          <body name="Hip" pos="0 0 0">
+            <joint name="Hip_joint" pos="0.01 -0.03344 0.329874" axis="1 0 0" range="-3.14 0.0" />
+            <geom mesh="PELE_PELE_MuJoCo v4_Hip2 (1)_1_Hip2" material="black" density="1240" />
+            <geom mesh="PELE_PELE_MuJoCo v4_Thigh_CF v2_1_Link1" material="black" density="1740" />
+            <geom mesh="PELE_PELE_MuJoCo v4_HASEL_7_Shell_1_Shell" material="white" mass="0.07" />
+            <geom mesh="PELE_PELE_MuJoCo v4_HASEL_7_electrode_1_electrode" material="black" mass="0.0001" />
+            <geom mesh="PELE_PELE_MuJoCo v4_HASEL_5_Shell_1_Shell" material="white" mass="0.014" />
+            <geom mesh="PELE_PELE_MuJoCo v4_HASEL_5_electrode_1_electrode" material="black" mass="0.0001" />
+            <geom mesh="PELE_PELE_MuJoCo v4_Knee_Joint v14_1_Knee1_1_Knee_Encoder_Mount" material="black" density="1240" />
+            <site name="HE_end" pos="0.0 -0.020616 0.314527" size="0.001" material="dark_red" />
+            <site name="HF_end" pos="0.0 -0.045874 0.34554" size="0.001" material="dark_red" />
+            <site name="KE_start" pos="0.0 -0.044092 0.303873" size="0.001" material="dark_red" />
+            <site name="KF_start" pos="0.0 -0.021499 0.30444" size="0.001" material="dark_red" />
+            <body name="Knee" pos="0 0 0">
+              <joint name="Knee_joint" pos="0.01 -0.027421 0.089949" axis="1 0 0" range="-3.14 0.0" />
+              <geom name="knee_sphere" type="sphere" size="0.002" pos="0.0 -0.045 0.075" mass="0.0001" material="green" contype="0" conaffinity="0" />
+              <geom mesh="PELE_PELE_MuJoCo v4_Shank_CF v2_1_Link2" material="black" density="1740" />
+              <geom mesh="PELE_PELE_MuJoCo v4_Knee_Joint v14_1_Knee2_1_Knee_Foot_Cap" material="black" density="1240" />
+              <geom mesh="PELE_PELE_MuJoCo v4_Printed_Foot_SEBS v1_1_Foot_Sphere" material="red" mass = "0.002" />
+              <site name="KE_end" pos="0.0 -0.042515 0.076828" size="0.001" material="dark_red" />
+              <site name="KF_end" pos="0.0 -0.008143 0.095276" size="0.001" material="dark_red" />
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <tendon>
+    <spatial name="HF_tendon" width="0.0005" limited="true" range="0.269 0.276">
+      <site site="HF_start" />
+      <site site="HF_end" />
+    </spatial>
+    <spatial name="HE_tendon" width="0.0005" limited="true" range="0.251 0.258">
+      <site site="HE_start" />
+      <site site="HE_end" />
+    </spatial>
+    <spatial name="KE_tendon" width="0.0005" limited="true" range="0.225 0.232">
+      <site site="KE_start" />
+      <site site="KE_end" />
+    </spatial>
+    <spatial name="KF_tendon" width="0.0005" limited="true" range="0.206 0.213">
+      <site site="KF_start" />
+      <site site="KF_end" />
+    </spatial>
+  </tendon>
+
+
+  <contact>
+    <exclude body1="Frame" body2="Boom1" />
+    <exclude body1="Frame" body2="Boom2" />
+    <exclude body1="Boom1" body2="Boom2" />
+    <exclude body1="Boom2" body2="Hip" />
+    <exclude body1="Hip" body2="Knee" />
+    <exclude body1="Knee" body2="Frame" />
+  </contact>
+
+  <actuator>
+    <position name="Boom3_joint" joint="Boom3_joint" ctrlrange="-1 1" kp="1" />
+    <general name="HF_tendon" tendon="HF_tendon" ctrllimited="true" ctrlrange="-500 0" forcelimited="true" forcerange="-500 0" 
+    dyntype="none" gaintype="fixed" biastype="none" 
+    dynprm="1 0 0 0 0 0 0 0 0 0" gainprm="1 0 0 0 0 0 0 0 0 0" biasprm="0 0 0 0 0 0 0 0 0 0" />
+    <general name="HE_tendon" tendon="HE_tendon" ctrllimited="true" ctrlrange="-500 0" forcelimited="true" forcerange="-500 0"
+    dyntype="none" gaintype="fixed" biastype="none"
+    dynprm="1 0 0 0 0 0 0 0 0 0" gainprm="1 0 0 0 0 0 0 0 0 0" biasprm="0 0 0 0 0 0 0 0 0 0" />
+    <general name="KE_tendon" tendon="KE_tendon" ctrllimited="true" ctrlrange="-500 0" forcelimited="true" forcerange="-500 0"
+    dyntype="none" gaintype="fixed" biastype="none"
+    dynprm="1 0 0 0 0 0 0 0 0 0" gainprm="1 0 0 0 0 0 0 0 0 0" biasprm="0 0 0 0 0 0 0 0 0 0" />
+    <general name="KF_tendon" tendon="KF_tendon" ctrllimited="true" ctrlrange="-500 0" forcelimited="true" forcerange="-500 0"
+    dyntype="none" gaintype="fixed" biastype="none"
+    dynprm="1 0 0 0 0 0 0 0 0 0" gainprm="1 0 0 0 0 0 0 0 0 0" biasprm="0 0 0 0 0 0 0 0 0 0" />
+  </actuator>
+
+
+</mujoco>

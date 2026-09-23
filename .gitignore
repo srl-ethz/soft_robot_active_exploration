@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+
+# launcher_*.py
+
+build/
+softae.egg-info/
+dist/
+results/
+plots
+plot_utils/
+
+wandb/
+slurm*
+video*
+
+data/
+
+*.csv
+
+tmp/
+.DS_Storepretrained/*.pkl
+pretrained/*.pkl

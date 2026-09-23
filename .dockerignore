@@ -1,0 +1,36 @@
+# Keep the 3 GB of pretrained weights out of the build context;
+# they are bind-mounted at runtime via docker-compose.yml.
+pretrained/
+
+# The bundled docker image archive (produced via `docker save | gzip`) lives at
+# the release root so reviewers can `docker load` from it. Exclude it from any
+# future build context - including it would re-embed a ~6 GB image into the
+# next image, ballooning size. Glob covers both the current name
+# (softae-docker-image-v1.0.tar.gz) and any future versioned variants.
+softae-docker-image-*.tar.gz
+softae-natcomm-*.tar.gz
+
+# Python build artifacts
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtualenvs
+.venv/
+venv/
+
+# Editor / OS junk
+.vscode/
+.idea/
+.DS_Store
+
+# Local run outputs
+SoftAE-*/
+wandb/
+results/
+plots/
+*.log

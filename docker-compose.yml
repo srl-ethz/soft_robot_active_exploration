@@ -1,0 +1,50 @@
+services:
+  softae-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: softae:cuda11
+    # Requires the NVIDIA Container Toolkit on the host. We use the legacy
+    # `runtime: nvidia` style instead of CDI / `--gpus all` for compatibility
+    # with hosts that do not have CDI specs generated under /etc/cdi/.
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      # The launchers import `experiments.util` as a top-level package while being
+      # executed from inside `experiments/<robot>_exp/`. Put the project root on
+      # PYTHONPATH so `experiments.*` and `softae.*` resolve regardless of CWD.
+      - PYTHONPATH=/workspace
+    volumes:
+      # Pretrained checkpoints are excluded from the image (see .dockerignore)
+      # and mounted here so the image stays small.
+      - ./pretrained:/workspace/pretrained:ro
+      # Persist demo outputs to the host for inspection. The launcher writes to
+      # `./results/<PROJECT_NAME>/...` from inside experiments/soft_arm_exp/, so
+      # we bind-mount the whole `results/` dir to a single host folder.
+      - ./results:/workspace/experiments/soft_arm_exp/results
+    working_dir: /workspace/experiments/soft_arm_exp
+    command: python launcher_eval.py --mode local
+
+  # Interactive shell for developing / running arbitrary launchers inside the
+  # softae environment. Source is bind-mounted so host edits show up without a
+  # rebuild. Use:
+  #   docker compose run --rm softae-shell
+  # Then inside the container:
+  #   cd /workspace/experiments/soft_arm_exp && python launcher.py
+  softae-shell:
+    image: softae:cuda11
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - PYTHONPATH=/workspace
+    volumes:
+      # Bind-mount the whole project root over /workspace so host edits are
+      # immediately visible inside the container (no rebuild needed).
+      - .:/workspace
+      - ./pretrained:/workspace/pretrained:ro
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    command: bash
